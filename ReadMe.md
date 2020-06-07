@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="ms.png" alt="Microsoft Logo" width="100">
+  <img src="ms.png" alt="Microsoft Logo" width="300">
   <br>
   Microsoft Summer Challange Programe 
   <br>
