@@ -19,7 +19,7 @@
 
 ### StoryBoard Development TimeStamp
 
-<img src="one.png" width="150"> <img src="two.png"  width="150"> <img src="three.png"  width="150"> <img src="four.png"  width="150">
+<img src="one.png" width="300"> <img src="two.png"  width="300"> <img src="three.png"  width="300"> <img src="four.png"  width="300">
 
 
 
