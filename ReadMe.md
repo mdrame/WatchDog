@@ -6,7 +6,7 @@
   <br>
 </h1>
 <h1 align="center">
-  W A T C H    D O G      👁‍🗨
+  W A T C H  -  D O G   👁‍🗨
   <br>
 </h1>
 
@@ -19,7 +19,7 @@
 
 ### StoryBoard Development TimeStamp
 
-<img src="TimeStamp/one.png" width="150"> <img src="TimeStamp/two.png"  width="150"> <img src="TimeStamp/three.png"  width="150"> <img src="TimeStamp/four.png"  width="150">
+<img src="one.png" width="150"> <img src="two.png"  width="150"> <img src="three.png"  width="150"> <img src="four.png"  width="150">
 
 
 
