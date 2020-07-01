@@ -116,6 +116,9 @@
                                         <state key="normal" title="RECORD ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWz-JB-MjQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,12 +160,44 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CardCustomeCollectionView" destination="3rF-K1-ajH" id="hTm-EO-cgm"/>
+                        <outlet property="cardCustomeCollectionView" destination="3rF-K1-ajH" id="hTm-EO-cgm"/>
+                        <segue destination="KbF-C9-Mef" kind="show" id="1At-1X-oB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Record-->
+        <scene sceneID="9wH-x9-grV">
+            <objects>
+                <viewController storyboardIdentifier="cameraVC" id="KbF-C9-Mef" customClass="CameraViewController" customModule="WatchDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNI-vc-auh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEH-eH-Ezn" userLabel="cameraLayer">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CEH-eH-Ezn" firstAttribute="leading" secondItem="Sov-Iv-Uw4" secondAttribute="leading" id="6vs-Na-Qon"/>
+                            <constraint firstItem="CEH-eH-Ezn" firstAttribute="centerX" secondItem="sNI-vc-auh" secondAttribute="centerX" id="Ds9-yp-pR7"/>
+                            <constraint firstItem="CEH-eH-Ezn" firstAttribute="top" secondItem="Sov-Iv-Uw4" secondAttribute="top" id="EbZ-g7-bbO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CEH-eH-Ezn" secondAttribute="bottom" constant="-34" id="Emm-fO-FVH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sov-Iv-Uw4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record" id="TgC-rx-UEW"/>
+                    <connections>
+                        <outlet property="videoView" destination="CEH-eH-Ezn" id="LtQ-NF-YLO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e58-ke-KHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="140.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dab-u3-l4T">

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		774FA1FB24AC211300D3A250 /* CameraClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FA24AC211300D3A250 /* CameraClass.swift */; };
+		774FA1FD24AC4F7300D3A250 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */; };
 		775425FF24888C49000FB491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775425FE24888C49000FB491 /* AppDelegate.swift */; };
 		7754260124888C49000FB491 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754260024888C49000FB491 /* SceneDelegate.swift */; };
 		7754260324888C49000FB491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754260224888C49000FB491 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		774FA1FA24AC211300D3A250 /* CameraClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraClass.swift; sourceTree = "<group>"; };
+		774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		775425FB24888C49000FB491 /* WatchDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775425FE24888C49000FB491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7754260024888C49000FB491 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		774FA1F924AC20F700D3A250 /* CameraStuff */ = {
+			isa = PBXGroup;
+			children = (
+				774FA1FA24AC211300D3A250 /* CameraClass.swift */,
+			);
+			path = CameraStuff;
+			sourceTree = "<group>";
+		};
 		775425F224888C49000FB491 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 			children = (
 				775425FE24888C49000FB491 /* AppDelegate.swift */,
 				7754260024888C49000FB491 /* SceneDelegate.swift */,
+				774FA1F924AC20F700D3A250 /* CameraStuff */,
 				7754261224888C63000FB491 /* Model */,
 				7754261324888C6D000FB491 /* View */,
 				7754261424888C72000FB491 /* Controller */,
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7754260224888C49000FB491 /* ViewController.swift */,
+				774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7754260324888C49000FB491 /* ViewController.swift in Sources */,
+				774FA1FD24AC4F7300D3A250 /* CameraViewController.swift in Sources */,
 				775425FF24888C49000FB491 /* AppDelegate.swift in Sources */,
 				7754260124888C49000FB491 /* SceneDelegate.swift in Sources */,
+				774FA1FB24AC211300D3A250 /* CameraClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

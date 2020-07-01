@@ -7,31 +7,36 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
-          super.viewDidLoad()
-       
+        super.viewDidLoad()
         collectionViewCalls()
-          
-      }
-    
-    // MARK: Views Functions
-    
-    /// Contain the following: 1. Delegate & DataSource
-    func collectionViewCalls() {
-        CardCustomeCollectionView.delegate = self
-        CardCustomeCollectionView.dataSource = self
     }
     
     // MARK: Instances
-  
+    
+    
+    // MARK: Views Functions
+    /// Contain the following: 1. Delegate & DataSource
+    func collectionViewCalls() {
+        cardCustomeCollectionView.delegate = self
+        cardCustomeCollectionView.dataSource = self
+    }
+    
+
+   
+    
     // MARK: Outlets
-    
-    @IBOutlet weak var CardCustomeCollectionView: UICollectionView!
-    
+    @IBOutlet weak var cardCustomeCollectionView: UICollectionView!
     
     // MARK: Actions
+    @IBAction func record(_ sender: UIButton) {
+         let cameraStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let cameraVC = cameraStoryBoard.instantiateViewController(identifier: "cameraVC") as? CameraViewController else { return }
+        present(cameraVC, animated: true, completion: nil)
+    }
 }
 
 
