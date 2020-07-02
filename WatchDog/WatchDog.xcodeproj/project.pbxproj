@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		774FA1FB24AC211300D3A250 /* CameraClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FA24AC211300D3A250 /* CameraClass.swift */; };
 		774FA1FD24AC4F7300D3A250 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */; };
+		774FA2B324AD7F5200D3A250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774FA2B224AD7F5200D3A250 /* GoogleService-Info.plist */; };
 		775425FF24888C49000FB491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775425FE24888C49000FB491 /* AppDelegate.swift */; };
 		7754260124888C49000FB491 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754260024888C49000FB491 /* SceneDelegate.swift */; };
 		7754260324888C49000FB491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754260224888C49000FB491 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		774FA1FA24AC211300D3A250 /* CameraClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraClass.swift; sourceTree = "<group>"; };
 		774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		774FA2B224AD7F5200D3A250 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		775425FB24888C49000FB491 /* WatchDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775425FE24888C49000FB491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7754260024888C49000FB491 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				7754261424888C72000FB491 /* Controller */,
 				7754260724888C4B000FB491 /* Assets.xcassets */,
 				7754260924888C4B000FB491 /* LaunchScreen.storyboard */,
+				774FA2B224AD7F5200D3A250 /* GoogleService-Info.plist */,
 				7754260C24888C4B000FB491 /* Info.plist */,
 			);
 			path = WatchDog;
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7754260B24888C4B000FB491 /* LaunchScreen.storyboard in Resources */,
+				774FA2B324AD7F5200D3A250 /* GoogleService-Info.plist in Resources */,
 				7754260824888C4B000FB491 /* Assets.xcassets in Resources */,
 				7754260624888C49000FB491 /* Main.storyboard in Resources */,
 			);
