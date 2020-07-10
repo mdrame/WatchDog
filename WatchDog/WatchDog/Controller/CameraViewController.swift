@@ -8,24 +8,43 @@
 
 import UIKit
 import AVFoundation
+import FirebaseStorage
+import ReplayKit
+
 
 class CameraViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Instance
+    let cameraClass = CameraClass()
+    
+    // Outlets
+    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var liveLabel: UILabel!
+    
+    // Outlets Customization
+    func outletsCustomization() {
+        liveLabel.clipsToBounds = true
+        liveLabel.layer.cornerRadius = 10
         
     }
     
-    // MARK: Outlet
-      @IBOutlet weak var videoView: UIView!
-      
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       outletsCustomization()
+        
+    }
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
-        CameraClass().switchTo(camera: .back, toBeDisplayAt: videoView, vc: self) { (finished) in
-            if finished {
-                print("Done Recording. Dismissing back to homevc")
-                dismiss(animated: true, completion: nil)
-            }
+        CameraClass().initializedCaptureSession(camera: .back, toBeDisplayAt: videoView, vc: self)
+        cameraClass.startLiveRecording()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        cameraClass.stopLiveRecording { (recordedViewPreview) in
+        print(recordedViewPreview)
         }
     }
     

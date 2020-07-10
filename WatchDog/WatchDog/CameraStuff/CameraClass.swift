@@ -9,17 +9,20 @@
 import Foundation
 import UIKit
 import AVFoundation
+import ReplayKit
 
 class CameraClass {
     
     // MARK: Instance
-
    var caputureSession: AVCaptureSession?
    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
    var frontCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)
    var backCamera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+    
+    var screenRecorder = RPScreenRecorder.shared()
+    
    
-    func switchTo(camera: AVCaptureDevice.Position, toBeDisplayAt view: UIView, vc: UIViewController, completionHandler: (_: Bool)->Void) {
+    func initializedCaptureSession(camera: AVCaptureDevice.Position, toBeDisplayAt view: UIView, vc: UIViewController) {
        if #available(iOS 10.2, *) {
            let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: camera)
            do {
@@ -35,6 +38,30 @@ class CameraClass {
            }
        }
    }
+    
+    /// This function records the streen
+    func startLiveRecording() {
+        screenRecorder.startRecording { (error) in
+            if error != nil {
+                print("Error occcured while trying to record screen 📱❌ \(error?.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    /// This function stop recording  the streen
+    func stopLiveRecording(completed sucessful: @escaping (RPPreviewViewController)->Void ) {
+        screenRecorder.stopRecording { (previewVC, error) in
+            guard let previewVC = previewVC else { return }
+            // sending preview to vc, just to be send back to the homevc. 
+            sucessful(previewVC)
+            if let error = error {
+                return
+            }
+        }
+    }
+    
+
  
 // func switchToFront() {
 //        if backCamera?.isConnected == true {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47EC5BF98D212AB5DB9440C3 /* Pods_WatchDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FB48D182897B64F91405E6 /* Pods_WatchDog.framework */; };
 		774FA1FB24AC211300D3A250 /* CameraClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FA24AC211300D3A250 /* CameraClass.swift */; };
 		774FA1FD24AC4F7300D3A250 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774FA1FC24AC4F7300D3A250 /* CameraViewController.swift */; };
 		774FA2B324AD7F5200D3A250 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774FA2B224AD7F5200D3A250 /* GoogleService-Info.plist */; };
@@ -30,6 +31,9 @@
 		7754260724888C4B000FB491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7754260A24888C4B000FB491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7754260C24888C4B000FB491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E2F29974F83AF6700E5F4A6 /* Pods-WatchDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDog.release.xcconfig"; path = "Target Support Files/Pods-WatchDog/Pods-WatchDog.release.xcconfig"; sourceTree = "<group>"; };
+		B4FB48D182897B64F91405E6 /* Pods_WatchDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12660888FD73CCA333A9538 /* Pods-WatchDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDog.debug.xcconfig"; path = "Target Support Files/Pods-WatchDog/Pods-WatchDog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EC5BF98D212AB5DB9440C3 /* Pods_WatchDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				775425FD24888C49000FB491 /* WatchDog */,
 				775425FC24888C49000FB491 /* Products */,
+				F68DD73FDBD550322B16C266 /* Pods */,
+				9733FEA3BA865411766CFDA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +115,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		9733FEA3BA865411766CFDA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4FB48D182897B64F91405E6 /* Pods_WatchDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F68DD73FDBD550322B16C266 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E12660888FD73CCA333A9538 /* Pods-WatchDog.debug.xcconfig */,
+				8E2F29974F83AF6700E5F4A6 /* Pods-WatchDog.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7754260F24888C4B000FB491 /* Build configuration list for PBXNativeTarget "WatchDog" */;
 			buildPhases = (
+				34D83F2528A7B3F13A4AF6B2 /* [CP] Check Pods Manifest.lock */,
 				775425F724888C49000FB491 /* Sources */,
 				775425F824888C49000FB491 /* Frameworks */,
 				775425F924888C49000FB491 /* Resources */,
+				40D84544B6435FD646C6FB6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +201,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34D83F2528A7B3F13A4AF6B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40D84544B6435FD646C6FB6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchDog/Pods-WatchDog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchDog/Pods-WatchDog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchDog/Pods-WatchDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		775425F724888C49000FB491 /* Sources */ = {
@@ -326,6 +395,7 @@
 		};
 		7754261024888C4B000FB491 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12660888FD73CCA333A9538 /* Pods-WatchDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +414,7 @@
 		};
 		7754261124888C4B000FB491 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2F29974F83AF6700E5F4A6 /* Pods-WatchDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
